@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            "use strict";
+            let arrF = [{
+                fullName:{
+                surname:'xxx',
+                firstName: 'yyy',
+                middleName: 'zzz',
+                testfirst:{
+                    key: 'liza',
+                },
+                testsecond:{
+                    boom:'aaaa',
+                },
+                testthird:{
+                    new:'ppppp',
+                },
+                }},{
+                fullName : { 
+                surname:'XXX',
+                firstName: 'YYY',
+                middleName: 'ZZZ',
+                test:{
+                    boom: 'aaaaaa',
+                },
+                lol:{
+                    lol: 'dima',
+                },
+                dima:{
+                    fs: 'kate',
+                }}}];
+
+            let arrS= {
+                fullName:{
+                surname:true,
+                firstName: true,
+                middleName: false,
+            }};
+
+            let arrT = {
+                fullName:{
+                    surname:'Прізвище',
+                    middleName:'По-батькові',
+            }}; //string
+            let result = [];
+                
+            for(let name in arrS.fullName){
+               // console.log(key); //surname firstname middlename
+               // console.log(arrS.fullName[key]) //true true false
+                if(arrS.fullName[name] == true){
+                //console.log(key);
+                result.push({name});
+            }
+            }
+            
+            for(let value1 in arrF[0]){
+
+               if(result[0].name == 'surname' && result[0].name != 'firstName' && result[0].name != 'middleName'){
+                  result[0].value1 = arrF[0].fullName.surname;
+               }
+               if(result[1].name == 'surname'  && result[1].name != 'firstName' && result[1].name != 'middleName'){
+                  result[1].value1 = arrF[0].fullName.surname;
+               }
+              /* if(result[2].name == 'surname'  && result[2].name != 'firstName' && result[2].name != 'middleName'){
+                  result[2].value1 = arrF[0].fullName.surname;
+               }*/
+               if(result[0].name == 'firstName' && result[0].name != 'surname' && result[0].name != 'middleName'){
+                  result[0].value1 = arrF[0].fullName.firstName;              
+                  }
+               if(result[1].name == 'firstName' && result[1].name != 'surname' && result[1].name != 'middleName'){
+                  result[1].value1 = arrF[0].fullName.firstName;              
+                  }
+               /*if(result[2].name == 'firstName' && result[2].name != 'surname' && result[2].name != 'middleName'){
+                  result[2].value1 = arrF[0].fullName.firstName;              
+                  }*/
+               if(result[0].name == 'middleName' && result[0].name != 'firstName' && result[0].name != 'surname'){
+                  result[0].value1 = arrF[0].fullName.middleName;
+                  }
+               if(result[1].name == 'middleName'  && result[1].name != 'firstName' && result[1].name != 'surname'){
+                  result[1].value1 = arrF[0].fullName.middleName;
+                  }
+               /*if(result[2].name == 'middleName'  && result[2].name != 'firstName' && result[2].name != 'surname'){
+                  result[2].value1 = arrF[0].fullName.middleName;
+                  }*/
+            }
+            
+            for(let value2 in arrF[0]){
+                if(result[0].name == 'surname' && result[0].name != 'firstName' && result[0].name != 'middleName'){
+                result[0].value2 = arrF[1].fullName.surname;
+                        }
+                if(result[1].name == 'surname'  && result[1].name != 'firstName' && result[1].name != 'middleName'){
+                result[1].value2 = arrF[1].fullName.surname;
+                        }
+                /*if(result[2].name == 'surname'  && result[2].name != 'firstName' && result[2].name != 'middleName'){
+                result[2].value2 = arrF[0].fullName.surname;
+                }*/
+                if(result[0].name == 'firstName' && result[0].name != 'surname' && result[0].name != 'middleName'){
+                result[0].value2 = arrF[1].fullName.firstName;              
+                }
+                if(result[1].name == 'firstName' && result[1].name != 'surname' && result[1].name != 'middleName'){
+                result[1].value2 = arrF[1].fullName.firstName;              
+                }
+               /* if(result[2].name == 'firstName' && result[2].name != 'surname' && result[2].name != 'middleName'){
+                 result[2].value2 = arrF[1].fullName.firstName;              
+                }*/
+                if(result[0].name == 'middleName' && result[0].name != 'firstName' && result[0].name != 'surname'){
+                result[0].value2 = arrF[1].fullName.middleName;
+                }
+                if(result[1].name == 'middleName'  && result[1].name != 'firstName' && result[1].name != 'surname'){
+                result[1].value2 = arrF[1].fullName.middleName;
+                }
+                /*if(result[2].name == 'middleName'  && result[2].name != 'firstName' && result[2].name != 'surname'){
+                result[2].value2 = arrF[1].fullName.middleName;
+                }*/
+                                    }
+                for(let name in arrT.fullName){
+                    if(result[0].name == 'surname'){
+                        result[0].name = arrT.fullName.surname;
+                    }
+                    if(result[1].name == 'surname'){
+                        result[1].name = arrT.fullName.surname;  
+                    }
+                   /* if(result[2].name == 'surname'){
+                        result[2].name = arrT.fullName.surname;  
+                    }*/
+                    if(result[0].name == 'middleName'){
+                        result[0].name = arrT.fullName.middleName;                      
+                    }
+                    if(result[1].name == 'middleName'){
+                        result[1].name = arrT.fullName.middleName;
+                    }
+                    /*if(result[2].name == 'middleName'){
+                        result[2].name = arrT.fullName.middleName;                       
+                    }*/
+                }
+
+                for(let boom in arrF[0].fullName){
+                if(typeof(arrF[0].fullName[boom]) === 'object'){
+                    let value = arrF[0].fullName[boom];
+                    //console.log(value); //'aaaa' 'pppp' 'liza'
+                    result.push(value);
+                }
+            }
+
+            for(let boom in arrF[1].fullName){
+                if(typeof(arrF[1].fullName[boom]) === 'object'){
+                    let value = arrF[1].fullName[boom];
+                    result.push(value);
+                    //console.log(value); //'aaaaa' 'dima' 'kate'
+                }
+            }
+            console.log(result);
+        </script>
+    </body>
+    </html>
